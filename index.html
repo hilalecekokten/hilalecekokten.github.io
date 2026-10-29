@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -10,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     /* =========================================================
        1. CANLI & MODERN RENK PALETİ VE EFEKT DEĞİŞKENLERİ
@@ -25,7 +23,6 @@
       --blue-light: #E8F2FE;         /* Yumuşak gök mavisi zemin */
       --blue-accent: #00B4D8;        /* Dinamik camgöbeği/turkuaz mavi ışıltı */
       --blue-glow: rgba(29, 106, 229, 0.28); /* Buton ve kart ışıltıları için */
-
       --text-main: #1F2937;          /* Kristal netliğinde modern koyu metin */
       --text-muted: #5B6E88;         /* Yumuşak ikincil metin */
       --subtitle-yellow: #FBBF24;    /* Altyazı sarısı vurgusu */
@@ -34,21 +31,17 @@
       --shadow-card: 0 10px 25px -4px rgba(13, 44, 84, 0.08), 0 4px 10px -2px rgba(29, 106, 229, 0.06);
       --shadow-hover: 0 20px 35px -5px rgba(29, 106, 229, 0.22), 0 10px 15px -3px rgba(13, 44, 84, 0.1);
       --shadow-button: 0 8px 20px -2px rgba(29, 106, 229, 0.35);
-
       --radius-card: 20px;
       --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       color: var(--text-main);
@@ -67,7 +60,6 @@
         url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231D6AE5' fill-opacity='0.04'%3E%3Ccircle cx='34' cy='32' r='3.5'/%3E%3Ccircle cx='46' cy='32' r='3.5'/%3E%3Ccircle cx='28' cy='40' r='3'/%3E%3Ccircle cx='52' cy='40' r='3'/%3E%3Cellipse cx='40' cy='48' rx='9' ry='7'/%3E%3C/g%3E%3C/svg%3E");
       background-attachment: fixed;
     }
-
     /* Arka planda yüzen dekoratif hafif ışık küreleri */
     .ambient-glow {
       position: fixed;
@@ -82,13 +74,11 @@
     }
     .glow-1 { top: -100px; right: -100px; }
     .glow-2 { bottom: 10%; left: -150px; animation-duration: 22s; }
-
     @keyframes floatAura {
       0% { transform: translateY(0px) rotate(0deg) scale(1); }
       50% { transform: translateY(40px) rotate(90deg) scale(1.08); }
       100% { transform: translateY(-30px) rotate(180deg) scale(0.95); }
     }
-
     /* =========================================================
        2. AÇILIŞTAKİ BEYAZ KEDİ ANİMASYONU
        ========================================================= */
@@ -106,13 +96,11 @@
       justify-content: center;
       transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
     }
-
     #cat-intro.hide {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
-
     .cat-stage {
       position: relative;
       display: flex;
@@ -120,7 +108,6 @@
       align-items: center;
       animation: catWalkIn 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     }
-
     .speech-bubble {
       background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-deep) 100%);
       color: #FFFFFF;
@@ -133,7 +120,6 @@
       position: relative;
       animation: popBubble 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s backwards;
     }
-
     .speech-bubble::after {
       content: '';
       position: absolute;
@@ -144,14 +130,12 @@
       border-style: solid;
       border-color: var(--blue-deep) transparent transparent;
     }
-
     .cat-avatar {
       width: 145px;
       height: 145px;
       filter: drop-shadow(0 12px 20px rgba(13, 44, 84, 0.15));
       animation: catWiggle 1.8s infinite ease-in-out alternate;
     }
-
     .skip-intro-btn {
       margin-top: 32px;
       background: rgba(255, 255, 255, 0.9);
@@ -171,23 +155,19 @@
       transform: translateY(-2px) scale(1.05);
       box-shadow: 0 8px 20px var(--blue-glow);
     }
-
     @keyframes catWalkIn {
       0% { transform: translateY(50px) scale(0.8); opacity: 0; }
       100% { transform: translateY(0) scale(1); opacity: 1; }
     }
-
     @keyframes catWiggle {
       0% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-9px) rotate(2.5deg); }
       100% { transform: translateY(0) rotate(-2.5deg); }
     }
-
     @keyframes popBubble {
       0% { transform: scale(0.2); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-
     /* =========================================================
        3. ÜST GEZİNME ÇUBUĞU (GLASSMORPHIC NAVBAR)
        ========================================================= */
@@ -202,7 +182,6 @@
       padding: 16px 28px;
       transition: var(--transition-smooth);
     }
-
     .nav-container {
       max-width: 1100px;
       margin: 0 auto;
@@ -210,7 +189,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .brand {
       font-family: 'Outfit', sans-serif;
       font-size: 1.3rem;
@@ -222,12 +200,10 @@
       gap: 10px;
       transition: var(--transition-smooth);
     }
-
     .brand:hover {
       transform: scale(1.03);
       color: var(--blue-primary);
     }
-
     .brand span.badge-paw {
       display: inline-block;
       transition: transform 0.4s ease;
@@ -235,14 +211,12 @@
     .brand:hover span.badge-paw {
       transform: rotate(20deg) scale(1.2);
     }
-
     .nav-links {
       display: flex;
       align-items: center;
       gap: 26px;
       list-style: none;
     }
-
     .nav-links a {
       text-decoration: none;
       color: var(--text-main);
@@ -252,7 +226,6 @@
       padding: 4px 0;
       transition: var(--transition-smooth);
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -264,15 +237,12 @@
       border-radius: 4px;
       transition: width 0.3s ease;
     }
-
     .nav-links a:hover {
       color: var(--blue-primary);
     }
-
     .nav-links a:hover::after {
       width: 100%;
     }
-
     .lang-switcher {
       display: flex;
       align-items: center;
@@ -283,12 +253,10 @@
       box-shadow: 0 2px 8px rgba(29, 106, 229, 0.12);
       transition: var(--transition-smooth);
     }
-
     .lang-switcher:hover {
       border-color: var(--blue-primary);
       box-shadow: 0 4px 14px var(--blue-glow);
     }
-
     .lang-btn {
       border: none;
       background: transparent;
@@ -300,18 +268,15 @@
       cursor: pointer;
       transition: var(--transition-smooth);
     }
-
     .lang-btn.active {
       background: linear-gradient(135deg, var(--blue-primary) 0%, #1555C0 100%);
       color: #FFFFFF;
       box-shadow: 0 4px 12px var(--blue-glow);
     }
-
     .lang-btn:hover:not(.active) {
       color: var(--blue-primary);
       transform: scale(1.05);
     }
-
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -320,7 +285,6 @@
       color: var(--blue-deep);
       cursor: pointer;
     }
-
     /* =========================================================
        4. HERO ALANI VE GELİŞMİŞ ALTYAZI ÇEVİRMENİ KUTUSU
        ========================================================= */
@@ -331,7 +295,6 @@
       position: relative;
       z-index: 1;
     }
-
     .hero-section {
       padding: 80px 0 55px 0;
       display: flex;
@@ -339,7 +302,6 @@
       align-items: center;
       text-align: center;
     }
-
     .sub-badge {
       display: inline-flex;
       align-items: center;
@@ -356,13 +318,11 @@
       border: 1px solid rgba(0, 180, 216, 0.4);
       transition: var(--transition-smooth);
     }
-
     .sub-badge:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 10px 25px rgba(0, 180, 216, 0.35);
       border-color: var(--blue-accent);
     }
-
     .sub-badge .rec-dot {
       width: 10px;
       height: 10px;
@@ -372,12 +332,10 @@
       box-shadow: 0 0 10px #EF4444;
       animation: blink 1.2s infinite alternate;
     }
-
     @keyframes blink {
       0% { opacity: 0.3; transform: scale(0.9); }
       100% { opacity: 1; transform: scale(1.15); }
     }
-
     .hero-title {
       font-family: 'Outfit', sans-serif;
       font-size: 3.2rem;
@@ -389,7 +347,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .hero-dept {
       font-size: 1.2rem;
       color: var(--blue-primary);
@@ -397,7 +354,6 @@
       margin-bottom: 28px;
       letter-spacing: -0.2px;
     }
-
     .subtitle-box {
       background: linear-gradient(145deg, rgba(13, 44, 84, 0.96) 0%, rgba(9, 29, 56, 0.98) 100%);
       color: #FFFFFF;
@@ -410,12 +366,10 @@
       transition: var(--transition-smooth);
       backdrop-filter: blur(10px);
     }
-
     .subtitle-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 22px 45px -5px rgba(29, 106, 229, 0.35), 0 0 0 1.5px rgba(0, 180, 216, 0.5);
     }
-
     .subtitle-box .timestamp {
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
@@ -426,19 +380,16 @@
       gap: 6px;
       margin-bottom: 10px;
     }
-
     .subtitle-box .sub-text {
       font-size: 1.28rem;
       font-weight: 600;
       color: #FFFFFF;
       line-height: 1.55;
     }
-
     .subtitle-box .sub-text span.highlight {
       color: var(--subtitle-yellow);
       text-shadow: 0 0 15px rgba(251, 191, 36, 0.35);
     }
-
     .languages-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -446,7 +397,6 @@
       gap: 14px;
       margin-top: 15px;
     }
-
     .lang-pill {
       background: var(--bg-cream-card);
       border: 1.5px solid rgba(29, 106, 229, 0.2);
@@ -463,7 +413,6 @@
       transition: var(--transition-smooth);
       cursor: default;
     }
-
     .lang-pill:hover {
       transform: translateY(-4px) scale(1.04);
       border-color: var(--blue-primary);
@@ -471,7 +420,6 @@
       box-shadow: var(--shadow-hover);
       color: var(--blue-primary);
     }
-
     .lang-pill .pill-circle {
       width: 10px;
       height: 10px;
@@ -479,19 +427,16 @@
       background: linear-gradient(135deg, var(--blue-accent), var(--blue-primary));
       box-shadow: 0 0 8px var(--blue-glow);
     }
-
     /* =========================================================
        5. BÖLÜMLER, KARTLAR VE ZENGİNLEŞTİRİLMİŞ HOVER EFEKTLERİ
        ========================================================= */
     .section-block {
       padding: 55px 0;
     }
-
     .section-header {
       text-align: center;
       margin-bottom: 40px;
     }
-
     .section-header h2 {
       font-family: 'Outfit', sans-serif;
       font-size: 2.1rem;
@@ -502,7 +447,6 @@
       gap: 12px;
       position: relative;
     }
-
     .section-header h2::after {
       content: '';
       position: absolute;
@@ -515,11 +459,9 @@
       border-radius: 4px;
       transition: width 0.3s ease;
     }
-
     .section-block:hover .section-header h2::after {
       width: 90px;
     }
-
     /* Genel Kart Yapısı: Gölgeler, Kenarlıklar ve Parlama Efekti */
     .card {
       background: var(--bg-cream-card);
@@ -533,14 +475,12 @@
       position: relative;
       overflow: hidden;
     }
-
     .card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow-hover);
       border-color: rgba(29, 106, 229, 0.45);
       background: rgba(255, 255, 255, 0.96);
     }
-
     .card::before {
       content: '';
       position: absolute;
@@ -552,19 +492,16 @@
       opacity: 0.7;
       transition: opacity 0.3s ease, height 0.3s ease;
     }
-
     .card:hover::before {
       opacity: 1;
       height: 5px;
     }
-
     .about-card {
       font-size: 1.1rem;
       line-height: 1.85;
       border-left: 6px solid var(--blue-primary);
       position: relative;
     }
-
     .about-card .paw-watermark {
       position: absolute;
       right: 24px;
@@ -574,18 +511,15 @@
       user-select: none;
       transition: transform 0.4s ease, opacity 0.4s ease;
     }
-
     .about-card:hover .paw-watermark {
       transform: scale(1.25) rotate(-15deg);
       opacity: 0.28;
     }
-
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
-
     .skill-card {
       background: var(--bg-cream-card);
       border: 1.5px solid rgba(29, 106, 229, 0.16);
@@ -595,14 +529,12 @@
       backdrop-filter: blur(10px);
       transition: var(--transition-smooth);
     }
-
     .skill-card:hover {
       transform: translateY(-7px) scale(1.01);
       box-shadow: var(--shadow-hover);
       border-color: var(--blue-primary);
       background: #FFFFFF;
     }
-
     .skill-card-title {
       font-family: 'Outfit', sans-serif;
       font-size: 1.25rem;
@@ -613,13 +545,11 @@
       align-items: center;
       gap: 10px;
     }
-
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .skill-badge {
       background: linear-gradient(135deg, var(--blue-light) 0%, #DCECFE 100%);
       color: var(--blue-deep);
@@ -631,7 +561,6 @@
       transition: var(--transition-smooth);
       cursor: default;
     }
-
     .skill-badge:hover {
       background: var(--blue-primary);
       color: #FFFFFF;
@@ -639,7 +568,6 @@
       box-shadow: 0 6px 16px var(--blue-glow);
       border-color: var(--blue-primary);
     }
-
     .experience-item {
       display: flex;
       gap: 20px;
@@ -648,17 +576,14 @@
       border-bottom: 1px dashed rgba(29, 106, 229, 0.22);
       transition: var(--transition-smooth);
     }
-
     .experience-item:last-child {
       border-bottom: none;
       padding-bottom: 0;
       margin-bottom: 0;
     }
-
     .experience-item:hover {
       transform: translateX(6px);
     }
-
     .exp-icon {
       width: 52px;
       height: 52px;
@@ -674,14 +599,12 @@
       box-shadow: 0 4px 12px rgba(29, 106, 229, 0.12);
       transition: var(--transition-smooth);
     }
-
     .experience-item:hover .exp-icon {
       transform: rotate(10deg) scale(1.1);
       background: var(--blue-primary);
       color: #FFFFFF;
       box-shadow: 0 8px 20px var(--blue-glow);
     }
-
     .exp-content h4 {
       font-family: 'Outfit', sans-serif;
       font-size: 1.2rem;
@@ -689,13 +612,11 @@
       color: var(--blue-deep);
       margin-bottom: 5px;
     }
-
     .exp-content p {
       font-size: 1rem;
       color: var(--text-main);
       font-weight: 500;
     }
-
     .fill-in-notice {
       display: inline-block;
       color: #7E92A9;
@@ -703,7 +624,6 @@
       font-size: 0.88rem;
       margin-top: 6px;
     }
-
     .hobby-card {
       text-align: center;
       padding: 30px 20px;
@@ -716,32 +636,27 @@
       position: relative;
       overflow: hidden;
     }
-
     .hobby-card:hover {
       background: #FFFFFF;
       transform: translateY(-8px) scale(1.03);
       border-color: var(--blue-primary);
       box-shadow: var(--shadow-hover);
     }
-
     .hobby-emoji {
       font-size: 2.6rem;
       margin-bottom: 12px;
       display: inline-block;
       transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-
     .hobby-card:hover .hobby-emoji {
       transform: scale(1.28) rotate(-8deg);
     }
-
     .hobby-title {
       font-family: 'Outfit', sans-serif;
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--blue-deep);
     }
-
     .contact-card {
       text-align: center;
       background: linear-gradient(135deg, var(--blue-deep) 0%, #103B75 50%, var(--blue-primary) 100%);
@@ -753,7 +668,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .contact-card::after {
       content: '🐾';
       position: absolute;
@@ -763,14 +677,12 @@
       opacity: 0.08;
       pointer-events: none;
     }
-
     .contact-card h3 {
       font-family: 'Outfit', sans-serif;
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 14px;
     }
-
     .contact-card p {
       color: #E2ECF8;
       margin-bottom: 28px;
@@ -779,7 +691,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .email-button {
       display: inline-flex;
       align-items: center;
@@ -795,20 +706,17 @@
       box-shadow: var(--shadow-button);
       position: relative;
     }
-
     .email-button:hover {
       background: #FFFFFF;
       color: var(--blue-deep);
       transform: translateY(-5px) scale(1.05);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 255, 255, 0.6);
     }
-
     .contact-extra-slot {
       margin-top: 24px;
       font-size: 0.88rem;
       color: #CBDCEF;
     }
-
     /* =========================================================
        6. ALT BİLGİ (FOOTER)
        ========================================================= */
@@ -822,7 +730,6 @@
       position: relative;
       z-index: 1;
     }
-
     /* =========================================================
        7. MOBİL UYUMLULUK (RESPONSIVE)
        ========================================================= */
@@ -866,11 +773,9 @@
   </style>
 </head>
 <body>
-
   <!-- Arka planda yüzen yumuşak mavi ışık auraları -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
-
   <!-- AÇILIŞTAKİ BEYAZ KEDİ ANİMASYONU -->
   <div id="cat-intro" role="dialog" aria-modal="true">
     <div class="cat-stage">
@@ -903,16 +808,13 @@
       <button class="skip-intro-btn" onclick="dismissCatIntro()" data-tr="Sayfaya Geç ➔" data-en="Enter Site ➔">Sayfaya Geç ➔</button>
     </div>
   </div>
-
   <!-- ÜST MENÜ (NAVBAR) VE DİL DEĞİŞTİRME BUTONU -->
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="brand">
         <span class="badge-paw">🐾</span> Hilal Ece Kökten
       </a>
-
       <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü">☰</button>
-
       <ul class="nav-links" id="nav-links">
         <li><a href="#about" data-tr="Hakkımda" data-en="About Me">Hakkımda</a></li>
         <li><a href="#skills" data-tr="Becerilerim" data-en="Skills">Becerilerim</a></li>
@@ -920,14 +822,12 @@
         <li><a href="#hobbies" data-tr="İlgi Alanlarım" data-en="Interests">İlgi Alanlarım</a></li>
         <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
       </ul>
-
       <div class="lang-switcher" role="group" aria-label="Dil Seçimi">
         <button class="lang-btn active" id="btn-tr" onclick="setLanguage('tr')">TR</button>
         <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
       </div>
     </div>
   </header>
-
   <!-- ANA SAYFA GİRİŞİ (HERO) -->
   <main class="container">
     <section class="hero-section">
@@ -937,20 +837,17 @@
         <span>•</span>
         <span data-tr="Çevirmen Portfolyosu" data-en="Translator Portfolio">Çevirmen Portfolyosu</span>
       </div>
-
       <h1 class="hero-title">Hilal Ece Kökten</h1>
       
       <p class="hero-dept" data-tr="Yeniyüzyıl Üniversitesi • Mütercim ve Tercümanlık (4. Sınıf)" data-en="Yeniyuzyil University • Translation and Interpreting (4th Year)">
         Yeniyüzyıl Üniversitesi • Mütercim ve Tercümanlık (4. Sınıf)
       </p>
-
       <div class="subtitle-box">
         <span class="timestamp">[00:01:24,000 --> 00:01:29,000]</span>
         <p class="sub-text" data-tr="&quot;Altyazı çevirisi ile ilgilenen bir <span class='highlight'>çevirmen adayıyım</span>.&quot;" data-en="&quot;I am a prospective <span class='highlight'>translator</span> with a focus on subtitle translation.&quot;">
           "Altyazı çevirisi ile ilgilenen bir <span class="highlight">çevirmen adayıyım</span>."
         </p>
       </div>
-
       <div class="languages-wrapper">
         <div class="lang-pill">
           <span class="pill-circle"></span>
@@ -966,7 +863,6 @@
         </div>
       </div>
     </section>
-
     <!-- 1. HAKKIMDA BÖLÜMÜ -->
     <section id="about" class="section-block">
       <div class="section-header">
@@ -980,7 +876,6 @@
         <span class="paw-watermark">🐾</span>
       </div>
     </section>
-
     <!-- 2. BECERİLERİM BÖLÜMÜ -->
     <section id="skills" class="section-block">
       <div class="section-header">
@@ -998,7 +893,6 @@
             <span class="skill-badge" data-tr="Terminoloji" data-en="Terminology">Terminoloji</span>
           </div>
         </div>
-
         <div class="skill-card">
           <div class="skill-card-title">
             <span>🎨</span>
@@ -1011,7 +905,6 @@
         </div>
       </div>
     </section>
-
     <!-- 3. DENEYİM BÖLÜMÜ -->
     <section id="experience" class="section-block">
       <div class="section-header">
@@ -1026,7 +919,6 @@
             <span class="fill-in-notice" data-tr="[Tarih veya detay eklemek isterseniz: buraya ekle]" data-en="[If you wish to add dates or details: add here]">[Tarih veya detay eklemek isterseniz: buraya ekle]</span>
           </div>
         </div>
-
         <div class="experience-item">
           <div class="exp-icon">🐾</div>
           <div class="exp-content">
@@ -1037,7 +929,6 @@
         </div>
       </div>
     </section>
-
     <!-- 4. İLGİ ALANLARI / HOBİLER BÖLÜMÜ -->
     <section id="hobbies" class="section-block">
       <div class="section-header">
@@ -1062,7 +953,6 @@
         </div>
       </div>
     </section>
-
     <!-- 5. İLETİŞİM BÖLÜMÜ -->
     <section id="contact" class="section-block">
       <div class="contact-card">
@@ -1080,34 +970,28 @@
       </div>
     </section>
   </main>
-
   <!-- ALT BİLGİ (FOOTER) -->
   <footer>
     <p>© <span id="year"></span> Hilal Ece Kökten 🐾 <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
   </footer>
-
   <!-- JAVASCRIPT: DİL GEÇİŞİ, MOBİL MENÜ VE ANİMASYON YÖNETİMİ -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     function dismissCatIntro() {
       const intro = document.getElementById('cat-intro');
       if (intro) {
         intro.classList.add('hide');
       }
     }
-
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         dismissCatIntro();
       }, 3400);
     });
-
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('open');
     }
-
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         const navLinks = document.getElementById('nav-links');
@@ -1116,15 +1000,12 @@
         }
       });
     });
-
     let currentLang = 'tr';
-
     function setLanguage(lang) {
       currentLang = lang;
       
       document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-
       const translatableElements = document.querySelectorAll('[data-tr][data-en]');
       translatableElements.forEach(el => {
         const text = el.getAttribute(`data-${lang}`);
@@ -1132,10 +1013,8 @@
           el.innerHTML = text;
         }
       });
-
       document.documentElement.lang = lang;
     }
   </script>
 </body>
 </html>
-```
